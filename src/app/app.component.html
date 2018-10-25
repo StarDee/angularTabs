@@ -1,0 +1,21 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div class="row">
+  <div class="col-md-4">
+    <ul>
+      <li><a routerLinkActive="active" routerLink="/home">首页</a></li>
+      <li><a routerLinkActive="active" routerLink="/about">关于我们</a></li>
+      <li><a routerLinkActive="active" routerLink="/news">新闻中心</a></li>
+      <li><a routerLinkActive="active" routerLink="/contact">联系我们</a></li>
+      <li><a (click)="gotoContact1(1)">联系我们不加路由</a></li>
+      <li><a (click)="gotoContact1(2)">联系我们不加路由</a></li>
+      <li><a (click)="gotoContact1(3)">联系我们不加路由</a></li>
+    </ul>
+  </div>
+  <div class="col-md-8">
+    <app-tabs></app-tabs>
+    <router-outlet></router-outlet>
+  </div>
+</div>
+
+
+<router-outlet></router-outlet>

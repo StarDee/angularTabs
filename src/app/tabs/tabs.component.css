@@ -1,0 +1,19 @@
+.row{
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  border-bottom: solid 1px #ddd;
+}
+
+.tab{
+  width: 10rem;
+  display: flex;
+  padding: 3px 6px;
+  align-items: center;
+  justify-content: space-between;
+  border-right: #dddddd solid 1px;
+}
+
+.tab--active{
+  background-color: #394bff;
+}

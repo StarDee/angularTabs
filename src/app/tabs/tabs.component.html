@@ -1,0 +1,6 @@
+<div class="row" *ngIf="isShow&&showedTabs.length>0">
+  <div class="tab" *ngFor="let tab of showedTabs" [ngClass]="{'tab--active':tab.isSelect}">
+    <span (click)="jump(tab)">{{tab.title}}</span>
+    <span class="close" (click)="deleteTabCache(tab)">x</span>
+  </div>
+</div>
