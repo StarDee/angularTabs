@@ -34,7 +34,7 @@ export class SimpleReuseStrategy implements RouteReuseStrategy {
     SimpleReuseStrategy.handlers[routeKey] = handle;
   }
 
-  /** 若 path 在缓存中有的都认为允许还原路由 */
+  /** 若 url 在缓存中有的都认为允许还原路由 */
   public shouldAttach(route: ActivatedRouteSnapshot): boolean {
     let isShow = route.routeConfig.data&&route.routeConfig.data.useCache;
     return !!SimpleReuseStrategy.handlers[SimpleReuseStrategy.getRouteUrl(route)]&&isShow;
@@ -49,7 +49,7 @@ export class SimpleReuseStrategy implements RouteReuseStrategy {
     return SimpleReuseStrategy.handlers[routeKey];
   }
 
-  /** 进入路由触发，判断是否同一路由 */
+  /** 进入路由触发，判断是否同一路由 添加Params判断 */
   public shouldReuseRoute(future: ActivatedRouteSnapshot, curr: ActivatedRouteSnapshot): boolean {
     const a = future.routeConfig === curr.routeConfig ;// &&
       // JSON.stringify(future.queryParams) === JSON.stringify(curr.queryParams);
